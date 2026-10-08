@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portofolio – Pembuatan Website</title>
+<meta name="description" content="Portofolio pembuatan website: undangan digital, website lembaga, dan aplikasi web pembelajaran.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--sand:#F4EFE6;--paper:#FCFAF5;--green:#1F4D3F;--green2:#2E6B58;--gold:#B8914A;--ink:#22302B;--soft:#66736D;--line:#DED6C6;--gold2:#D9B66C;--deep:#143629;--serif:'Playfair Display',Georgia,serif;--sans:'Manrope',system-ui,sans-serif;--pat:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Cpath d='M28 0L56 28L28 56L0 28Z' fill='none' stroke='%231F4D3F' stroke-opacity='.06'/%3E%3C/svg%3E");--patg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Cpath d='M28 0L56 28L28 56L0 28Z' fill='none' stroke='%23D9B66C' stroke-opacity='.16'/%3E%3C/svg%3E")}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font:400 1rem/1.7 var(--sans);color:var(--ink);background:var(--sand);-webkit-text-size-adjust:100%}
+section{padding:64px 22px;max-width:680px;margin:0 auto}
+.band{background:var(--paper);max-width:none}.band>.in{max-width:680px;margin:0 auto}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15}
+h2{font-size:2.1rem;color:var(--green);margin-bottom:8px}
+.sm{color:var(--soft);font-size:.95rem}
+.btn{display:inline-block;background:var(--green);color:#fff;border:1px solid var(--green);padding:12px 24px;border-radius:10px;font:600 .92rem var(--sans);text-decoration:none;cursor:pointer}
+.btn.o{background:transparent;color:var(--green)}.btn:active{transform:scale(.98)}
+.btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+/* hero */
+#top{padding-top:60px}
+.me{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.av{width:46px;height:46px;border-radius:50%;background:var(--green);color:var(--paper);display:flex;align-items:center;justify-content:center;font:italic 1.4rem var(--serif);background-size:cover;background-position:center}
+.me b{display:block;font-weight:600;line-height:1.2}.me span{font-size:.85rem;color:var(--soft)}
+#top h1{font-size:2.9rem;color:var(--green);letter-spacing:-.01em;margin-bottom:16px}
+#top h1 i{color:var(--gold)}
+#top p.sm{max-width:480px;margin-bottom:24px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.stack{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);font-size:.85rem;color:var(--soft)}
+/* proyek */
+.proj{margin-top:22px;background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.band .proj{background:var(--sand)}
+.th{aspect-ratio:16/9;display:flex;align-items:flex-end;padding:16px 18px;background:linear-gradient(135deg,var(--green),var(--green2) 60%,#4b8a73);background-size:cover;background-position:center;color:#fff}
+.th span{font:italic 500 2.3rem/1 var(--serif);opacity:.95}
+.pb{padding:18px 20px 20px}
+.pb small{color:var(--gold);font-weight:600;font-size:.8rem}
+.pb h3{font-size:1.5rem;margin:2px 0 6px}
+.pb p{font-size:.95rem;color:var(--soft)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 16px}
+.tags i{font-style:normal;font-size:.78rem;border:1px solid var(--line);border-radius:20px;padding:2px 10px;color:var(--green)}
+.pb .btn{padding:9px 18px}
+/* layanan */
+.svc{margin-top:22px;border-top:1px solid var(--line)}
+.svc div{padding:18px 0;border-bottom:1px solid var(--line)}
+.svc h3{font-size:1.35rem;color:var(--green)}.svc p{font-size:.95rem;color:var(--soft)}
+/* alur */
+.flow{margin-top:20px;counter-reset:n}
+.flow div{display:flex;gap:14px;padding:12px 0;counter-increment:n}
+.flow div:before{content:counter(n);flex:none;width:32px;height:32px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font:600 .9rem var(--sans)}
+.flow h3{font-size:1.2rem}
+/* kontak */
+#kontak{text-align:center}
+#kontak h2{font-size:2.3rem}
+footer{text-align:center;padding:26px 22px calc(92px + env(safe-area-inset-bottom,0px));font-size:.85rem;color:var(--soft)}
+.fab{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:9;box-shadow:0 10px 24px -10px rgba(31,77,63,.7);white-space:nowrap}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* ===== tampilan elegan ===== */
+body{background-image:var(--pat)}
+h2:after{content:"";display:block;width:46px;height:2px;background:var(--gold);margin-top:10px}
+#kontak h2:after{margin-inline:auto}
+#top{max-width:none;padding:64px max(22px,calc((100% - 680px)/2)) 56px;background:var(--patg),linear-gradient(165deg,var(--deep),var(--green) 60%,#2d6552);color:var(--sand)}
+#top .me b{color:var(--sand)}#top .me span{color:rgba(244,239,230,.7)}
+#top .av{background:var(--gold2);color:var(--deep)}
+#top h1{color:var(--sand);font-size:3rem;letter-spacing:-.015em}
+#top h1 i{color:var(--gold2)}
+#top p.sm{color:rgba(244,239,230,.78)}
+#top .btn{background:var(--gold2);border-color:var(--gold2);color:var(--deep)}
+#top .btn.o{background:transparent;color:var(--gold2)}
+#top .stack{border-top-color:rgba(217,182,108,.35);color:rgba(244,239,230,.65)}
+.band{background:var(--paper) var(--pat)}
+.proj{border-radius:18px;box-shadow:0 22px 40px -28px rgba(20,54,41,.55)}
+.th{background-image:var(--patg),linear-gradient(135deg,var(--deep),var(--green2))}
+.th span{color:var(--gold2)}
+</style>
+</head>
+<body>
+<section id="top">
+  <div class="me"><div class="av" id="av"></div><div><b id="nama"></b><span id="peran"></span></div></div>
+  <h1>Website yang rapi, cepat, dan <i>nyaman dibuka di HP</i></h1>
+  <p class="sm" id="intro"></p>
+  <div class="cta"><a class="btn" href="#proyek">Lihat proyek</a><a class="btn o" id="wa1" target="_blank" rel="noopener">Hubungi saya</a></div>
+  <div class="stack" id="stack"></div>
+</section>
+
+<section class="band" id="proyek"><div class="in">
+  <h2>Proyek</h2>
+  <p class="sm">Beberapa website yang sudah saya kerjakan.</p>
+  <div id="list"></div>
+</div></section>
+
+<section id="layanan">
+  <h2>Layanan</h2>
+  <div class="svc" id="svc"></div>
+</section>
+
+<section class="band"><div class="in">
+  <h2>Cara kerja</h2>
+  <div class="flow" id="flow"></div>
+</div></section>
+
+<section id="kontak">
+  <h2>Punya ide website?</h2>
+  <p class="sm" style="margin-bottom:20px">Ceritakan kebutuhannya, saya bantu dari rancangan sampai online.</p>
+  <a class="btn" id="wa2" target="_blank" rel="noopener">Chat WhatsApp</a>
+</section>
+
+<footer id="ft"></footer>
+<a class="btn fab" id="wa3" target="_blank" rel="noopener">Chat WhatsApp</a>
+
+<script>
+/* ===== UBAH BAGIAN INI SAJA ===== */
+const CFG={
+  nama:'Nama Anda',
+  peran:'Pembuat website',
+  foto:'',                              // alamat foto profil (opsional)
+  wa:'6281234567890',                   // awali 62, tanpa + dan spasi
+  pesan:'Halo, saya tertarik membuat website.',
+  intro:'Saya membuat website untuk lembaga, pendidikan, dan acara pribadi. Dikerjakan dengan tampilan bersih dan tetap enak dipakai di layar ponsel.',
+  stack:'React · TypeScript · Vite · FastAPI · MongoDB · Vercel · GitHub',
+  proyek:[
+    {kat:'Undangan digital', nama:'Undangan Pernikahan Digital', gambar:'',
+     ket:'Satu website dengan nama tamu otomatis di setiap link. Dilengkapi countdown, galeri, RSVP, ucapan, amplop digital, dan pembuat link untuk WhatsApp.',
+     tag:['HTML','CSS','JavaScript','Vercel'], link:'https://the-wedding-of-raka-alya-1.vercel.app/?to=Bapak+Ahmad'},
+    {kat:'Website usaha', nama:'Aleexx Coffee Web', gambar:'',
+     ket:'Website kafe dengan tampilan hangat dan mudah dibuka dari HP, memperkenalkan menu dan suasana tempat kepada pelanggan.',
+     tag:['Website kafe','Mobile-first'], link:''},      // isi link kalau sudah online
+    {kat:'Website lembaga', nama:'Website Pondok Pesantren', gambar:'',
+     ket:'Website profil dan layanan untuk pondok pesantren, dengan frontend dan backend terpisah.',
+     tag:['React','FastAPI','MongoDB','Vercel'], link:''}      // isi link kalau sudah online
+  ],
+  layanan:[
+    ['Undangan digital','Undangan pernikahan atau acara dengan nama tamu otomatis, RSVP, dan ucapan.'],
+    ['Website lembaga','Profil sekolah, pesantren, komunitas, atau usaha kecil yang jelas dan mudah dikelola.'],
+    ['Website usaha dan kafe','Halaman menu, lokasi, jam buka, dan kontak yang mudah dibuka pelanggan dari HP.']
+  ],
+  alur:[
+    ['Diskusi kebutuhan','Kita tentukan isi, tujuan, dan contoh tampilan yang Anda suka.'],
+    ['Rancang dan bangun','Saya kerjakan, Anda melihat hasilnya lewat link pratinjau.'],
+    ['Revisi dan online','Setelah disetujui, website dipasang online dan saya bantu panduan pemakaiannya.']
+  ]
+};
+/* ===== ===================== ===== */
+const $=id=>document.getElementById(id),E=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+const wa='https://wa.me/'+CFG.wa+'?text='+encodeURIComponent(CFG.pesan);
+['wa1','wa2','wa3'].forEach(i=>$(i).href=wa);
+$('nama').textContent=CFG.nama;$('peran').textContent=CFG.peran;$('intro').textContent=CFG.intro;$('stack').textContent=CFG.stack;
+$('ft').textContent='© '+new Date().getFullYear()+' '+CFG.nama;document.title='Portofolio – '+CFG.nama;
+if(CFG.foto)$('av').style.backgroundImage='url("'+CFG.foto+'")';else $('av').textContent=(CFG.nama[0]||'A');
+CFG.proyek.forEach(p=>{
+  const c=E('div','proj'),t=E('div','th'),b=E('div','pb');
+  if(p.gambar)t.style.backgroundImage='url("'+p.gambar+'")';else t.append(E('span','',p.nama.split(' ').slice(0,2).join(' ')));
+  b.append(E('small','',p.kat),E('h3','',p.nama),E('p','',p.ket));
+  const g=E('div','tags');p.tag.forEach(x=>g.append(E('i','',x)));b.append(g);
+  if(p.link){const a=E('a','btn','Buka website');a.href=p.link;a.target='_blank';a.rel='noopener';b.append(a)}
+  c.append(t,b);$('list').append(c);
+});
+CFG.layanan.forEach(([a,b])=>{const d=E('div');d.append(E('h3','',a),E('p','',b));$('svc').append(d)});
+CFG.alur.forEach(([a,b])=>{const d=E('div'),t=E('div');t.append(E('h3','',a),E('p','sm',b));d.append(t);$('flow').append(d)});
+</script>
+</body>
+</html>
